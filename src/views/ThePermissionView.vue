@@ -1,12 +1,17 @@
 <template>
-  <div>
-    <h2>Accounts App (Remote)</h2>
-    <PermissionApp />
-    <!-- <RouterView /> -->
-  </div>
+  <div id="remote-container"></div>
+  <TheAmir />
 </template>
+
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
-import { RouterView } from 'vue-router'
-const PermissionApp = defineAsyncComponent(() => import('remotePermissions/PermissionApp'))
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  import('remotePermissions/PermissionApp').then((app) => {
+    const el = document.getElementById('remote-container')
+    if (el) {
+      app.default.mount(el)
+    }
+  })
+})
 </script>
