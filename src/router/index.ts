@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import accountRoutes from 'remoteAccounts/AccountRoutes'
+// import permissionRoutes from 'remotePermissions/PermissionRoutes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,17 +10,14 @@ const router = createRouter({
       component: () => import('@/layouts/AppLayout.vue'),
       children: [
         {
+          path: 'permission',
+          component: () => import('remotePermissions/PermissionApp'),
+        },
+        {
           path: '',
           name: 'ThePanel',
           component: () => import('@/layouts/PanelLayout.vue'),
-          children: [
-            ...accountRoutes,
-            {
-              path: '',
-              name: 'TheAccounts',
-              component: () => import('@/views/AccountsView.vue'),
-            },
-          ],
+          children: [],
         },
         {
           path: 'auth',

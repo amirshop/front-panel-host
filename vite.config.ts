@@ -46,9 +46,7 @@ export default defineConfig({
     federation({
       name: 'host-amirshop',
       remotes: {
-        remoteAccounts: 'http://localhost:5901/assets/accountsEntry.js',
-        // remoteRoles: 'http://localhost:5903/assets/rolesEntry.js',
-        // remoteProducts: 'http://localhost:5905/assets/productsAppEntry.js',
+        remotePermissions: 'http://localhost:5901/assets/permissionsEntry.js',
       },
       shared: ['vue', 'pinia', 'vue-router'],
     }),

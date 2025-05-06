@@ -1,18 +1,18 @@
-declare module 'remoteAccounts/AccountApp' {
+declare module 'remotePermissions/PermissionApp' {
   import { DefineComponent } from 'vue'
   const component: DefineComponent<{}, {}, any>
   export default component
 }
-declare module 'remoteAccounts/AccountRoutes' {
-  import type { RouteRecordRaw } from 'vue-router'
-  const routes: RouteRecordRaw[]
-  export default routes
-}
-declare module 'remoteAccounts/AccountStore' {
+// declare module 'remotePermissions/PermissionRoutes' {
+//   import type { RouteRecordRaw } from 'vue-router'
+//   const routes: RouteRecordRaw[]
+//   export default routes
+// }
+declare module 'remotePermissions/PermissionStore' {
   import { StoreDefinition } from 'pinia'
-  interface AccountState {
-    account: string
-    accounts: string[]
+  interface PermissionState {
+    permission: string
+    permissions: string[]
   }
-  export const useAccountStore: StoreDefinition<'account', AccountState, {}, {}>
+  export const usePermissionStore: StoreDefinition<'permission', PermissionState, {}, {}>
 }

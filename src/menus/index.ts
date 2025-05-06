@@ -33,6 +33,19 @@ export const useMenus = () => {
     { type: 'divider' },
 
     {
+      key: 'ThePermission',
+      label: t('Permission'),
+      icon: () => h(Icon, { icon: 'tabler:users', height: 18 }),
+      children: [
+        {
+          key: 'ThePermissionList',
+          label: t('Permission'),
+          icon: () => h(Icon, { icon: 'tabler:users', height: 18 }),
+        },
+      ],
+    },
+
+    {
       key: 'TheCustomers',
       label: t('customers'),
       icon: () => h(Icon, { icon: 'tabler:users', height: 18 }),
