@@ -1,17 +1,14 @@
 <template>
-  <div id="remote-container"></div>
-  <TheAmir />
+  <div id="permission-container"></div>
+
+  <div class="permission-wrapper">
+    <PermissionApp />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import PermissionApp from 'remotePermissions/PermissionApp'
+console.log(PermissionApp);
 
-onMounted(() => {
-  import('remotePermissions/PermissionApp').then((app) => {
-    const el = document.getElementById('remote-container')
-    if (el) {
-      app.default.mount(el)
-    }
-  })
-})
+
 </script>
