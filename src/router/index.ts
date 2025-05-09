@@ -11,7 +11,8 @@ const router = createRouter({
       children: [
         {
           path: 'permission',
-          component: () => import('remotePermissions/PermissionApp'),
+          name: 'PermissionWrapper',
+          component: ()=> import('@/views/ThePermissionView.vue')
         },
         {
           path: '',
