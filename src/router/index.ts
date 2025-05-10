@@ -10,15 +10,24 @@ const router = createRouter({
       component: () => import('@/layouts/AppLayout.vue'),
       children: [
         {
+<<<<<<< Updated upstream
           path: 'permission',
           name: 'PermissionWrapper',
           component: ()=> import('@/views/ThePermissionView.vue')
         },
         {
+=======
+>>>>>>> Stashed changes
           path: '',
           name: 'ThePanel',
           component: () => import('@/layouts/PanelLayout.vue'),
-          children: [],
+          children: [
+            {
+              path: '/permission/:pathMatch(.*)*',
+              name: 'ThePermissionView',
+              component: () => import('@/views/RemotePermissionWrapper.vue'),
+            },
+          ],
         },
         {
           path: 'auth',

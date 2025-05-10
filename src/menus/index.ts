@@ -38,7 +38,7 @@ export const useMenus = () => {
       icon: () => h(Icon, { icon: 'tabler:users', height: 18 }),
       children: [
         {
-          key: 'ThePermissionList',
+          key: 'ThePermissionView',
           label: t('Permission'),
           icon: () => h(Icon, { icon: 'tabler:users', height: 18 }),
         },

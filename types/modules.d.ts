@@ -1,7 +1,5 @@
 declare module 'remotePermissions/PermissionApp' {
-  import { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
-  export default component
+ export function mountPermissionApp(el: Element): void
 }
 // declare module 'remotePermissions/PermissionRoutes' {
 //   import type { RouteRecordRaw } from 'vue-router'

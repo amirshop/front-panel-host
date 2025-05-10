@@ -45,6 +45,10 @@ export default defineConfig({
     }),
     federation({
       name: 'host-amirshop',
+      filename: 'hostEntry.js',
+      exposes: {
+        './hostPanelStore': './src/stores/panelSettings.store.ts',
+      },
       remotes: {
         remotePermissions: 'http://localhost:5901/assets/permissionsEntry.js',
       },
