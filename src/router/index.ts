@@ -10,14 +10,11 @@ const router = createRouter({
       component: () => import('@/layouts/AppLayout.vue'),
       children: [
         {
-<<<<<<< Updated upstream
           path: 'permission',
           name: 'PermissionWrapper',
           component: ()=> import('@/views/ThePermissionView.vue')
         },
         {
-=======
->>>>>>> Stashed changes
           path: '',
           name: 'ThePanel',
           component: () => import('@/layouts/PanelLayout.vue'),
