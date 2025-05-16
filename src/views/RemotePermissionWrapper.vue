@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { mountPermissionApp } from 'remotePermissions/PermissionApp'
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted,  } from 'vue'
 
 let appInstance: ReturnType<typeof mountPermissionApp> | null = null
 
